@@ -53,6 +53,11 @@
 // Scroll to section on link click
 
 // Set sections as active
+
+const sliderSections = document.querySelectorAll('section')
+
+const navLists = document.querySelectorAll('.section_nav')
+
 function debounce(func, wait = 20, immediate = true) {
     let timeout;
     return function() {
@@ -68,7 +73,6 @@ function debounce(func, wait = 20, immediate = true) {
     };
 }
 
-const sliderSections = document.querySelectorAll('section')
 
 function checkSlide() {
     sliderSections.forEach(sliderSection => {
@@ -86,4 +90,22 @@ function checkSlide() {
     });
   }
 
-window.addEventListener('scroll',debounce(checkSlide));
+//   function checkActive(section) {
+//       section.classList.value.includes('your-active-class')
+//   }
+
+//   function addClass(section) {
+//       console.log(`click`)
+//     if (!checkActive(section)) {
+//         section.classList.add('your-active-class')
+//     }  
+//   }
+
+window.addEventListener("scroll",debounce(checkSlide));
+
+for (let i = 0; i < navLists.length;i++) {
+    navLists[i].addEventListener("click",()=>{
+        setTimeout(()=>window.scrollTo(0, window.pageYOffset+1),400)
+    })
+}
+
