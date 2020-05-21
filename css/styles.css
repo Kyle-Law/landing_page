@@ -78,16 +78,19 @@ section {
 .navbar__menu li {
     display: inline-block;
     color: black;
+    transition: .3s;
+    cursor: pointer;
     padding: 20px;
 }
 
-.navbar__menu li a{
-    text-decoration: none;
+.navbar__menu li:hover {
+    color: white;
+    background-color: black;
 }
 
-.navbar__menu .active{
-    background-color: black;
-    color: white;
+.navbar__menu li a{
+    padding: 20px;
+    text-decoration: none;
 }
 
 .navbar__menu li a { color: inherit; } 
