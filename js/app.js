@@ -34,17 +34,6 @@ function checkSlide() {
     });
   }
 
-//   function checkActive(section) {
-//       section.classList.value.includes('your-active-class')
-//   }
-
-//   function addClass(section) {
-//       console.log(`click`)
-//     if (!checkActive(section)) {
-//         section.classList.add('your-active-class')
-//     }  
-//   }
-
 window.addEventListener("scroll",debounce(checkSlide));
 
 for (let i = 0; i < navLists.length;i++) {
