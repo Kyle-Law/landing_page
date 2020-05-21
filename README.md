@@ -1,6 +1,6 @@
 # Landing Page
 
-> Landing Page
+> A simple Landing Page with JavaScript features. CSS styling is added to or removed from section upon scrolling. Besides, users can scroll smoothly to the target section upon clicking the navbar.
 
 ### Screenshot
 ![image](https://user-images.githubusercontent.com/55923773/82569321-a8ff2980-9bb2-11ea-938a-0afcc645e2cf.png)
