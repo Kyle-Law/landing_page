@@ -46,6 +46,11 @@ p {
 }
 
 /* ---- Layout Rules ---- */
+
+html {
+    scroll-behavior: smooth;
+}
+
 main {
     margin: 10vh 1em 10vh;
 }
@@ -72,7 +77,21 @@ section {
 
 .navbar__menu li {
     display: inline-block;
+    color: black;
+    padding: 20px;
 }
+
+.navbar__menu li a{
+    text-decoration: none;
+}
+
+.navbar__menu .active{
+    background-color: black;
+    color: white;
+}
+
+.navbar__menu li a { color: inherit; } 
+
 
 .navbar__menu .menu__link {
     display: block;
