@@ -14,7 +14,7 @@
 
 ## Live Demo
 
-<a href="https://rawcdn.githack.com/Kyle-Law/landing_page/49ef90b444de48f68e80da02afbb5a371ac4125e/index.html" target="_blank">Live Demo Link</a>
+<a href="https://rawcdn.githack.com/Kyle-Law/landing_page/f7b12c6105d63fa4bbbc8912e519a4b7b5e56ab5/index.html" target="_blank">Live Demo Link</a>
 
 
 ## 🤝 Contributing
