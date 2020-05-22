@@ -32,32 +32,47 @@ function debounce(func, wait = 20, immediate = true) {
 }
 
 function checkSlide() {
-    sliderSections.forEach(sliderSection => {
+    sliderSections.forEach((sliderSection,index) => {
       // half way through the section
       const slideInAt = (window.scrollY + window.innerHeight) - sliderSection.offsetHeight / 2;
       // bottom of the section
       const sectionBottom = sliderSection.offsetTop + sliderSection.offsetHeight;
       const isHalfShown = slideInAt > sliderSection.offsetTop;
       const isNotScrolledPast = window.scrollY < sectionBottom -200;
+      const isTop = window.scrollY < 219;
       if (isHalfShown && isNotScrolledPast) {
         sliderSection.classList.add('your-active-class');
+        navLists[index+1].classList.add('li_active');
       } else {
         sliderSection.classList.remove('your-active-class');
+        navLists[index+1].classList.remove('li_active');
+      }
+      if (isTop) {
+        navLists[0].classList.add('li_active');
+      } else {
+        navLists[0].classList.remove('li_active');
       }
     });
   }
 
+// window.addEventListener("scroll",()=>{
+//   window.scrollY==0 ? navLists[0].classList.add("li_active") : navLists[0].classList.remove("li_active");
+//   debounce(checkSlide);
+
+// });
 window.addEventListener("scroll",debounce(checkSlide));
+
 
 function scrollToSection() {
   navLists[0].addEventListener("click", ()=> {
     window.scrollTo(0, 0);
+    setTimeout(()=>window.scrollTo(0, window.pageYOffset+1),700)
   })
   for (let i = 1; i < navLists.length;i++) {
     navLists[i].addEventListener("click",()=>{
-        sliderSections[i-1].scrollIntoView();
+        sliderSections[i-1].scrollIntoView({behavior: "smooth"});
 
-        setTimeout(()=>window.scrollTo(0, window.pageYOffset+1),400)
+        setTimeout(()=>window.scrollTo(0, window.pageYOffset+1),700)
     })
   }
 }

@@ -85,6 +85,11 @@ section {
 
 .navbar__menu li:hover {
     color: white;
+    background-color: grey;
+}
+
+.navbar__menu .li_active {
+    color: white;
     background-color: black;
 }
 
