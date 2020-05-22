@@ -69,18 +69,23 @@ section {
 /* ---- Module Rules ---- */
 
 /* Navigation Styles*/
+ul {
+    display: none;
+}
+
 .navbar__menu ul {
     padding-left: 0;
     margin: 0;
     text-align: right;
+    // visibility: hidden;
 }
 
 .navbar__menu li {
-    display: inline-block;
     color: black;
     transition: .3s;
     cursor: pointer;
     padding: 20px;
+    display: inline-block;
 }
 
 .navbar__menu li:hover {
@@ -93,9 +98,40 @@ section {
     background-color: black;
 }
 
+.navbar__menu .li_active:hover {
+    background-color: black;
+}
+
 .navbar__menu li a{
     padding: 20px;
     text-decoration: none;
+}
+header i {
+    font-size: 2.5rem;
+    color: black;
+    display: inline-block;
+    text-align: right;
+    width: 100%; 
+}
+
+.menu_container {
+    margin-right: 10px;
+    padding: 10px;
+}
+
+.show {
+    display: grid;
+}
+
+@media only screen and (min-width: 35em){
+    .navbar__menu ul {
+        display: block;
+    }
+
+    .menu_container {
+        display: none;
+    }
+    
 }
 
 .navbar__menu li a { color: inherit; } 

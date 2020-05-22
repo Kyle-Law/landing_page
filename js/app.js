@@ -1,5 +1,12 @@
 const sliderSections = document.querySelectorAll('section');
 
+const hamburger = document.querySelector('.menu_container');
+const ul = document.querySelector('ul')
+
+hamburger.addEventListener("click",()=>{
+  ul.classList.toggle("show");
+});
+
 function addList() {
   const ul = document.querySelector('ul');
   const title = ['Home', 'Section 1','Section 2','Section 3','Section 4'];
@@ -8,13 +15,13 @@ function addList() {
     let li = document.createElement("li");
     li.appendChild(document.createTextNode(title[i]));
     li.setAttribute("class", "section_nav");
+    if (i === 0) {li.setAttribute("class", "section_nav li_active");}
     ul.appendChild(li);
   }
 }
 
 addList()
-
-const navLists = document.querySelectorAll('.section_nav')
+const navLists = document.querySelectorAll('.section_nav');
 
 function debounce(func, wait = 20, immediate = true) {
     let timeout;
@@ -39,7 +46,7 @@ function checkSlide() {
       const sectionBottom = sliderSection.offsetTop + sliderSection.offsetHeight;
       const isHalfShown = slideInAt > sliderSection.offsetTop;
       const isNotScrolledPast = window.scrollY < sectionBottom -200;
-      const isTop = window.scrollY < 219;
+      const isTop = window.scrollY < sliderSections[0].offsetTop - 200;
       if (isHalfShown && isNotScrolledPast) {
         sliderSection.classList.add('your-active-class');
         navLists[index+1].classList.add('li_active');
@@ -62,6 +69,7 @@ function scrollToSection() {
   navLists[0].addEventListener("click", ()=> {
     window.scrollTo(0, 0);
     setTimeout(()=>window.scrollTo(0, window.pageYOffset+1),700)
+
   })
   for (let i = 1; i < navLists.length;i++) {
     navLists[i].addEventListener("click",()=>{
