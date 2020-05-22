@@ -55,11 +55,6 @@ function checkSlide() {
     });
   }
 
-// window.addEventListener("scroll",()=>{
-//   window.scrollY==0 ? navLists[0].classList.add("li_active") : navLists[0].classList.remove("li_active");
-//   debounce(checkSlide);
-
-// });
 window.addEventListener("scroll",debounce(checkSlide));
 
 
