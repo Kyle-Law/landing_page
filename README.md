@@ -2,8 +2,8 @@
 
 > A simple Landing Page with JavaScript features. CSS styling is added to or removed from section upon scrolling. Besides, users can scroll smoothly to the target section upon clicking the navbar.
 
-### Screenshot
-![image](https://user-images.githubusercontent.com/55923773/82569321-a8ff2980-9bb2-11ea-938a-0afcc645e2cf.png)
+
+![image](https://user-images.githubusercontent.com/55923773/82652789-cbe01b00-9c50-11ea-83db-e67e0cb7bd89.png)
 
 
 ## Built With
@@ -14,7 +14,7 @@
 
 ## Live Demo
 
-<a href="https://rawcdn.githack.com/Kyle-Law/landing_page/15893bdbac551c72b673085df6d2586795be836d/index.html" target="_blank">Live Demo Link</a>
+<a href="https://rawcdn.githack.com/Kyle-Law/landing_page/87f273293a1040ff2c711dee87eb029f58f17277/index.html" target="_blank">Live Demo Link</a>
 
 
 ## 🤝 Contributing
